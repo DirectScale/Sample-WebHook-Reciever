@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
-namespace WebHookRecieverSample.Controllers
+namespace WebHookReceiverSample.Controllers
 { 
     [Route("/")]
     [ApiExplorerSettings(IgnoreApi = true)]
