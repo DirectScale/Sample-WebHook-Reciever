@@ -59,3 +59,42 @@ public class Order
     public DateTime EventDateUtc { get; set; }
 }
 ```
+
+### Create Associate Event V1 & Update Associate Event V1
+The CreateAssociateEvent is fired any time a new associate is created.
+The UpdateAssociateEvent is fired any time an associates' record is updated.
+Both the CreateAssociateEvent and UpdateAssociateEvent share the same data model.
+
+```csharp
+public class Associate
+{
+    public int AssociateId { get; set; }
+    public string Username { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string CompanyName { get; set; }
+    public string EmailAddress { get; set; }
+    public int AssociateStatus { get; set; }
+    public int AssociateType { get; set; }
+    public string[] WebAliases { get; set; }
+    public string BackOfficeId { get; set; }
+    public string ExternalReferenceId { get; set; }
+    public DateTime EventDateUtc { get; set; }
+}
+```
+
+
+### Create Subscription Event V1 & Update Subscription Event V1
+The CreateSubscriptionEvent and UpdateSubscriptionEvent share the same data model.
+
+```csharp
+public class Subscription
+{
+    public int AssociateId { get; set; }
+    public int SubscriptionId { get; set; }
+    public string SubscriptionName { get; set; }
+    public DateTime ExpirationDateUtc { get; set; }
+    public bool IsVoid { get; set; }
+    public DateTime EventDateUtc { get; set; }
+}
+```
